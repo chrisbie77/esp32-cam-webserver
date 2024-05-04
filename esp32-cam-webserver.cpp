@@ -5,12 +5,21 @@
 #include "src/app_cam.h"        // Camera 
 #include "src/app_httpd.h"      // Web server
 #include "src/camera_pins.h"    // Pin Mappings
+#include "LittleFS.h"
 
 /* 
  * This sketch is a extension/expansion/rework of the ESP32 Camera webserer example.
  * 
  */
 
+// Function declarations needed for compiling with PlatformIO.
+void filesystemStart();
+void handleSerial();
+void notifyConnect();
+void notifyDisconnect();
+void flashLED(int flashtime);
+void scheduleReboot(int delay);
+void resetI2CBus();
 
 void setup() {
     Serial.begin(115200);
