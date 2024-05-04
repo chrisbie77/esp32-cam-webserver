@@ -13,7 +13,6 @@
 #define STORAGE_UNITS_MB 2
 
 #ifdef USE_LittleFS
-// LITTLEFS is now called LittleFS and included in the esp32 core
 #include <LittleFS.h>
 #define FORMAT_LITTLEFS_IF_FAILED true
 #define STORAGE_UNITS STORAGE_UNITS_BT
